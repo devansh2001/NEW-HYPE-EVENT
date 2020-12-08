@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
-import { Form, Button, Container, Card} from 'react-bootstrap'
+import { Form, Button, Container } from 'react-bootstrap'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { browserHistory } from 'react-router';
 
 class ConditionalActivity extends Component {
-    constructor(props) {
-        super(props);
-        
-    }
 
     state = {
         numberOne: null,

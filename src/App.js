@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import Space from './Images/space.jpg';
 import './App.css';
 import SortingActivity from './components/SortingActivity';

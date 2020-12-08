@@ -66,14 +66,14 @@ class LoopsActivity extends Component {
         * Create a regular variable to keep track of what row you are on
         * Hint: looking at the slide examples might help
         */
-        let i = 0
+        // create row variable here
 
         /*
         * Step 2:
         * Create the condition for the outer loop using the row variable above
         * Remember - we only want to have 5 rows
         */
-        while (i < 5) {
+        while (PUT_CONDITION_HERE) {
 
             /*
             * Step 4:
@@ -81,7 +81,7 @@ class LoopsActivity extends Component {
             * We create the variable here instead of outside of the main loop so that it resets everytime the row loops is run
             * Try moving it outside of the first loop to see what happens
             */
-            let j = 0
+            // create star variable here
 
             /*
             * Step 5:
@@ -89,7 +89,7 @@ class LoopsActivity extends Component {
             * Remember - the number of stars we want to print out is directly related to the row number we're on
             * Hint: we will want to use the row variable in this condition along with the star variable
             */
-            while (j <= i) {
+            while (PUT_CONDITION_HERE) {
                 
                 // this will add our star to the pattern for us
                 pattern.push("* ");
@@ -99,7 +99,7 @@ class LoopsActivity extends Component {
                 * Add 1 to the value of the star variable so that it is updated each time the loop is run
                 * If we forget this, it will print out an infinite number of stars for that row
                 */
-                j++
+                // increment the star variable here
             }
             // this line of code starts a new line for each row
             pattern.push(<br/>);
@@ -109,7 +109,6 @@ class LoopsActivity extends Component {
             * If we forget this, the loop will run forever
             */
             // increment row variable here
-            i++
         }
 
         this.setState ({ userPattern: pattern });
