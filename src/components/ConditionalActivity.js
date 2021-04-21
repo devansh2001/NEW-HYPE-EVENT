@@ -15,13 +15,13 @@ class ConditionalActivity extends Component {
     };
 
     handleProceed = () => {
-        browserHistory.push('/loops');
+        browserHistory.push('/singleloop');
     }
 
     handleBack = () => {
         browserHistory.push('/');
     }
-    
+
     /*
     This is the method we will be working for the conditional activity
     */
@@ -73,24 +73,24 @@ class ConditionalActivity extends Component {
         * ...
         * }
         */
-       // greatest logic here
-        
-       /*
-        * Step 2:
-        * Create the logic for finding the smallest number using the variables number1, number2, and number3 declared above
-        * Since there are three varaibles, we must check every variable against the other two
-        * For each case, we then will assign the correct number variable to least
-        * Example:
-        * if (number1 <= number2 && number1 <= number3) {
-        *   least = number1
-        * } else if (number2 <= ....) {
-        * ...
-        * } else if (number3 <= ...) {
-        * ...
-        * }
-        */
+        // greatest logic here
+
+        /*
+         * Step 2:
+         * Create the logic for finding the smallest number using the variables number1, number2, and number3 declared above
+         * Since there are three varaibles, we must check every variable against the other two
+         * For each case, we then will assign the correct number variable to least
+         * Example:
+         * if (number1 <= number2 && number1 <= number3) {
+         *   least = number1
+         * } else if (number2 <= ....) {
+         * ...
+         * } else if (number3 <= ...) {
+         * ...
+         * }
+         */
         // least logic here
-        
+
 
         /* 
         * Learning Note:
@@ -105,72 +105,72 @@ class ConditionalActivity extends Component {
 
     render() {
         return (
-        <Container >
-            <br/>
-            <h2 style={{textAlign: "center"}}>Conditionals Activity</h2>
-            <hr/>
-            <Row style={{width:"100%"}}className="justify-content-md-center">
-                <Col >
-                    <Row className="justify-content-md-center">
-                        <Form.Label><h4>Enter three numbers:</h4></Form.Label>
-                    </Row>
-                    <Row className="justify-content-md-center">
-                    <Form.Group >
-                        <Form.Control
-                        className="variableExample"
-                        placeholder="Number One"
-                        style={{marginTop: "10px"}}
-                        value={this.state.numberOne}
-                        onChange={e => this.setState({ numberOne: e.target.value })}
-                        type="text"
-                        />
-                        <Form.Control
-                        className="variableExample"
-                        placeholder="Number Two"
-                        style={{marginTop: "10px"}}
-                        value={this.state.numberTwo}
-                        onChange={e => this.setState({ numberTwo: e.target.value })}
-                        type="text"
-                        />
-                        <Form.Control
-                        className="variableExample"
-                        placeholder="Number Three"
-                        style={{marginTop: "10px"}}
-                        value={this.state.numberThree}
-                        onChange={e => this.setState({ numberThree: e.target.value})}
-                        type="text"
-                        />
+            <Container >
+                <br />
+                <h2 style={{ textAlign: "center" }}>Conditionals Activity</h2>
+                <hr />
+                <Row style={{ width: "100%" }} className="justify-content-md-center">
+                    <Col >
                         <Row className="justify-content-md-center">
-                        <Button
-                        className="btnFormSend"
-                        style={{marginTop: "30px"}}
-                        onClick={this.compareNumbers}
-                        >
-                        Compare
-                        </Button>
+                            <Form.Label><h4>Enter three numbers:</h4></Form.Label>
                         </Row>
-                    </Form.Group> 
-                    </Row> 
-                </Col>
-            </Row>
-            <hr/>
-            <Row style={{width:"100%", color: "white"}}className="justify-content-md-center">
-                <h4>Greatest = <span style={{color: "#7FFF00"}}>{this.state.displayGreatest}</span></h4>    
-            </Row>
-            <Row style={{width:"100%", color: "white"}}className="justify-content-md-center"> 
-                <h4>Least = <span style={{color: "#7FFF00"}}>{this.state.displayLeast}</span></h4>
-            </Row>
+                        <Row className="justify-content-md-center">
+                            <Form.Group >
+                                <Form.Control
+                                    className="variableExample"
+                                    placeholder="Number One"
+                                    style={{ marginTop: "10px" }}
+                                    value={this.state.numberOne}
+                                    onChange={e => this.setState({ numberOne: e.target.value })}
+                                    type="text"
+                                />
+                                <Form.Control
+                                    className="variableExample"
+                                    placeholder="Number Two"
+                                    style={{ marginTop: "10px" }}
+                                    value={this.state.numberTwo}
+                                    onChange={e => this.setState({ numberTwo: e.target.value })}
+                                    type="text"
+                                />
+                                <Form.Control
+                                    className="variableExample"
+                                    placeholder="Number Three"
+                                    style={{ marginTop: "10px" }}
+                                    value={this.state.numberThree}
+                                    onChange={e => this.setState({ numberThree: e.target.value })}
+                                    type="text"
+                                />
+                                <Row className="justify-content-md-center">
+                                    <Button
+                                        className="btnFormSend"
+                                        style={{ marginTop: "30px" }}
+                                        onClick={this.compareNumbers}
+                                    >
+                                        Compare
+                        </Button>
+                                </Row>
+                            </Form.Group>
+                        </Row>
+                    </Col>
+                </Row>
+                <hr />
+                <Row style={{ width: "100%", color: "white" }} className="justify-content-md-center">
+                    <h4>Greatest = <span style={{ color: "#7FFF00" }}>{this.state.displayGreatest}</span></h4>
+                </Row>
+                <Row style={{ width: "100%", color: "white" }} className="justify-content-md-center">
+                    <h4>Least = <span style={{ color: "#7FFF00" }}>{this.state.displayLeast}</span></h4>
+                </Row>
 
-            <Button onClick={this.handleBack} className={'my-navigation-button'} >
-                Go To Previous Activity!
+                <Button onClick={this.handleBack} className={'my-navigation-button'} >
+                    Go To Previous Activity!
             </Button>
-            <Button onClick={this.handleProceed} className={'my-navigation-button'} >
-                Proceed To Next Activity!
+                <Button onClick={this.handleProceed} className={'my-navigation-button'} >
+                    Proceed To Next Activity!
             </Button>
-        </Container>
+            </Container>
 
         );
-      }
+    }
 }
 
 export default ConditionalActivity;
